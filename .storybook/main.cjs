@@ -17,7 +17,7 @@ module.exports = {
   },
   viteFinal: (config, {configType}) => {
     if(configType == "PRODUCTION"){
-      config.base = '/ignite-lab-design-system' // Essa configuração só será utilizada em caso de o storybook for acessado por subdominio exemplo.com/ignite-lab-design-system para o storybook não se perder.
+      config.base = '/DesignSystem-IgniteLab' // Essa configuração só será utilizada em caso de o storybook for acessado por subdominio exemplo.com/ignite-lab-design-system para o storybook não se perder.
     }
 
     return config
