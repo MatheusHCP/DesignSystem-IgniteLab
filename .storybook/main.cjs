@@ -8,6 +8,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    '@storybook/addon-interactions'
     
   ],
   "framework": "@storybook/react",
@@ -15,8 +16,12 @@ module.exports = {
     "builder": "@storybook/builder-vite"
   },
   "features": {
-    "storyStoreV7": true
+    "storyStoreV7": true,
+    "interactionsDebugger": true,
   },
+  "staticDirs": [
+    "../public"
+  ],
   viteFinal: (config, {configType}) => {
     if(configType == "PRODUCTION"){
       config.base = '/DesignSystem-IgniteLab' // Essa configuração só será utilizada em caso de o storybook for acessado por subdominio exemplo.com/ignite-lab-design-system para o storybook não se perder.
